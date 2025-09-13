@@ -1,0 +1,24 @@
+name: ARC Demo (on-demand runners)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: arc-runner-set
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show runner info
+        run: |
+          echo "This job runs on a self-hosted runner managed by ARC"
+          hostname
+          cat /etc/os-release || true
+
+      - name: Run a small build/test
+        run: |
+          python3 --version || true
+          echo "Done."
