@@ -56,7 +56,7 @@ The GitHub PAT should have at least "repo", "workflow", "admin:org", and "admin:
 
 ```sh
 RUNNER_NS="arc-runners"
-GITHUB_PAT="ghp_4WpDHUEq7s11
+GITHUB_PAT="ghp_4WpDHUEq7s11xxx"
 ```
 
 
